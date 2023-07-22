@@ -40,6 +40,19 @@ typedef struct parameters
 	unsigned int width;
 	unsigned int precision;
 } params_t;
+
+/*
+ * struct specifier - struct allowed
+ * @specifier : format allowed
+ * @f : function associated
+ */
+typedef struct specifier
+{
+	char *specifier;
+	int (*f)(va_list, params_t *);
+} specifier_t;
+
+
 /*function prototype */
 int _printf(const char *format, ...);
 int print_char(va_list ap, params_t *params);

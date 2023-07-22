@@ -14,17 +14,17 @@
 #define CONVERT_LOWERCASE 1
 #define CONVERT_UNSIGNED 2
 /**
- * struct - struct param
- * @unsign :flag
- * @plus :flag
- * @space :flag
- * @hash :flag
+ * struct - struct paramametrs
+ * @unsign :flag for unsigned
+ * @plus :flag for plus
+ * @space :flag for space
+ * @hash :flag for hashtag
  * @l_modifier :on if l_modifier is calling
  * @h_modifier :on if h_modifier is calling
  * @width :field width
  * @precision :field presision
- * @0_flag :flag
- * @minus :flag
+ * @0_flag :flag for zeros
+ * @minus :flag for minus
  *
  */
 typedef struct parameters
@@ -34,26 +34,25 @@ typedef struct parameters
 	unsigned int space_flag	: 1;
 	unsigned int hashtag_flag	: 1;
 	unsigned int zero_flag	: 1;
-	unsigned int minus_flag	: 1 ;
+	unsigned int minus_flag	: 1;
 	unsigned int l_modifier	: 1;
 	unsigned int h_modifier	: 1;
-	unsigned int width ;
-	unsigned int precision ;
-}params_t;
+	unsigned int width;
+	unsigned int precision;
+} params_t;
 /*function prototype */
 int _printf(const char *format, ...);
-int print_char (va_list ap, params_t *params);
-int print_string (va_list ap, params_t *params);
-int print_percent (va_list ap, params_t *params);
-int print_int (va_list ap, params_t *params);
-int print_binary (va_list ap, params_t *params);
-int print_unsigned (va_list ap, params_t *params);
-int print_octal (va_list ap, params_t *params);
-int print_hexadecimal (va_list ap, params_t *params);
-int print_hexa_upper (va_list ap, params_t *params);
-int print_s (va_list ap, params_t *params);
-int print_addresse (va_list ap, params_t *params);
-int print_rev (va_list ap, params_t *params);
-int print_rot13 (va_list ap, params_t *params);
+int print_char(va_list ap, params_t *params);
+int print_string(va_list ap, params_t *params);
+int print_percent(va_list ap, params_t *params);
+int print_int(va_list ap, params_t *params);
+int print_binary(va_list ap, params_t *params);
+int print_unsigned(va_list ap, params_t *params);
+int print_octal(va_list ap, params_t *params);
+int print_hexadecimal(va_list ap, params_t *params);
+int print_hexa_upper(va_list ap, params_t *params);
+int print_s(va_list ap, params_t *params);
+int print_addresse(va_list ap, params_t *params);
+int print_rev(va_list ap, params_t *params);
+int print_rot13(va_list ap, params_t *params);
 #endif
-/*it not complet yet */

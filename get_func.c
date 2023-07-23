@@ -9,7 +9,8 @@
  */
 int get_func(char specifier, va_list ap)
 {
-   :w{"c", p_char},
+    pr_spf spf[] = {
+        {"c", p_char},
         {"s", p_string},
         {"d", p_decimal},
         {"i", p_integer},

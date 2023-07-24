@@ -3,11 +3,11 @@
 #include <stdarg.h>
 /**
  * get_func - a function that select through the printing function
- * @specifier: a character specifier
- * @ap: a pointerto the last fixed string
- * Return: the number of printed characters
- */
-int get_func(char specifier, va_list ap)
+ * @specifier: a pointer to the specifier
+ * @ap: a pointer to the last fixed string
+ * Return: (sum) the number of printed characters
+*/
+int get_func(char specifier, va_list ap) 
 {
     pr_spf spf[] = {
         {"c", p_char},
@@ -16,8 +16,8 @@ int get_func(char specifier, va_list ap)
         {"i", p_integer},
         {NULL, NULL}
     };
-    int i = 0, n_printed_char = 0;
-
+    int i = 0;
+    int n_printed_char = 0;
     while (spf[i].par)
     {
         if (specifier == *(spf[i].par))
@@ -27,5 +27,11 @@ int get_func(char specifier, va_list ap)
         }
         i++;
     }
+    if (specifier)
+    {
+        _putchar(specifier);
+        return (1);
+    }
+
     return (0);
 }

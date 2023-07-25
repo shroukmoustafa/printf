@@ -18,4 +18,8 @@ int p_string(va_list ap);
 int p_decimal(va_list ap);
 int p_integer(va_list ap);
 int recursive_print(int n);
+int p_u_integer(va_list ap);
+int recursive_print_u(unsigned int n);
+int p_reverse(va_list ap);
+
 #endif

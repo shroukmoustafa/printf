@@ -9,12 +9,12 @@
 */
 int p_u_integer(va_list ap)
 {
-   int len = 0;
-    unsigned int n = va_arg(ap, unsigned int);
+int len = 0;
+unsigned int n = va_arg(ap, unsigned int);
 
-    n = ((int) n);
-    len += recursive_print_u(n);
-   return (len);
+n = ((int) n);
+len += recursive_print_u(n);
+return (len);
 }
 
 /**
@@ -24,16 +24,15 @@ int p_u_integer(va_list ap)
 */
 int recursive_print_u(unsigned int n)
 {
-    unsigned int len = 0;
+unsigned int len = 0;
+if (n / 10 != 0)
+{
+len += recursive_print_u(n / 10);
+}
 
+_putchar(n % 10 + '0');
+len++;
 
-    if (n / 10 != 0) {
-        len += recursive_print_u(n / 10);
-    }
-
-    _putchar(n % 10 + '0');
-    len++;
-
-    return (len);
+return (len);
 }
 

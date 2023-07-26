@@ -9,7 +9,7 @@
  */
 int _putchar(char c)
 {
- return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 /**
  * p_char - a function that prints a single charachter
@@ -18,10 +18,11 @@ int _putchar(char c)
 */
 int p_char(va_list ap)
 {
-    char c;
-    c =(va_arg(ap, int));
-    if (!c)
-        return (0);
-    _putchar(c);
-    return (1);
+	char c;
+
+	c = (va_arg(ap, int));
+	if (!c)
+		return (0);
+	_putchar(c);
+	return (1);
 }
